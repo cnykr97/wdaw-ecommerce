@@ -1,0 +1,16 @@
+.App {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.dummy-row {
+  flex: 1;
+}
+
+a,
+.nav-link,
+.nav-link:hover {
+  text-decoration: none;
+  color: inherit;
+}

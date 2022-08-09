@@ -1,0 +1,12 @@
+/* Media Queries */
+
+@media (max-width: 768px) {
+    .navbar>.container-fluid {
+        justify-content: flex-start;
+    }
+
+    .navbar-brand {
+        margin-left: calc(50% - 125px);
+    }
+
+}
