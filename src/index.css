@@ -11,6 +11,20 @@
 a,
 .nav-link,
 .nav-link:hover {
+  cursor: pointer;
   text-decoration: none;
   color: inherit;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+}
+
+button:focus {
+  outline: none;
+}
+
+ul {
+  list-style: none;
 }

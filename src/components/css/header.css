@@ -1,3 +1,100 @@
+.header {
+    background-color: #fff;
+}
+
+.header .disabled {
+    font-size: 0.8rem;
+}
+
+.header a {
+    font-weight: 500;
+    border-radius: 10px;
+}
+
+.header .collapse a:hover {
+    background-color: #000;
+    color: #fff;
+}
+
+.header .nav-icons {
+    background-color: lightgrey;
+    border-radius: 10px;
+}
+
+.header .nav-icons .nav-link {
+    margin-right: 0.5rem;
+}
+
+.header .fa-caret-up,
+.header .fa-caret-down {
+    margin-left: 0.5rem;
+}
+
+#wishlist-icon {
+    --fa-beat-scale: 1.5;
+}
+
+.wishlist,
+.shopping-cart {
+    position: relative;
+}
+
+#wishlist-quantity,
+#shopping-cart-quantity {
+    width: 15px;
+    height: 15px;
+    font-weight: 500;
+    border: 2px solid #000;
+    border-radius: 50%;
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    position: absolute;
+    top: 0;
+    right: 10px
+}
+
+#services-dropdown {
+    display: none;
+    /* add transition when its display is block */
+    transition: display 0.5s;
+
+}
+
+.search {
+    position: relative;
+}
+
+#search-dropdown {
+    display: none;
+    background-color: lightgrey;
+    padding: 1rem 2rem;
+    width: 40vw;
+    border-radius: 10px 0 0 10px;
+    position: absolute;
+    bottom: -5rem;
+    right: 0;
+}
+
+#search-dropdown button {
+    border: 1px solid #000
+}
+
+#search-dropdown button:hover {
+    background-color: #000;
+    color: #fff;
+}
+
+#signin-modal .modal-title {
+    margin-left: calc(50% - 2rem);
+}
+
+
+
+
+
+
 /* Media Queries */
 
 @media (max-width: 768px) {
@@ -7,6 +104,68 @@
 
     .navbar-brand {
         margin-left: calc(50% - 125px);
+    }
+
+    .header .navbar-collapse li a {
+        padding: 0.75rem 1rem
+    }
+
+}
+
+@media (min-width: 768px) and (max-width: 900px) {
+    .header a {
+        font-size: 0.8rem;
+    }
+
+}
+
+@media (min-width: 768px) {
+    .header .navbar-collapse {
+        display: flex;
+        max-width: fit-content;
+        margin: 0 auto;
+    }
+
+    .services {
+        position: relative;
+    }
+
+    #services-dropdown {
+        background-color: #fff;
+        position: absolute;
+        width: 30vw;
+        padding-right: 0.5rem;
+    }
+
+    #services-dropdown ul {
+        padding: 0;
+    }
+
+    #services-dropdown .nav-item {
+        margin-left: 10px;
+    }
+
+}
+
+@media (min-width: 1200px) {
+    .header .navbar-collapse li {
+        margin-left: 2rem;
+    }
+
+    .header .nav-icons .nav-link {
+        margin-right: 1rem;
+    }
+
+    .header .nav-icons {
+        padding: 1rem 2rem;
+    }
+
+}
+
+@media (min-width: 1500px) {
+
+    .header .nav-icons {
+        margin-right: 2rem;
     }
 
 }
