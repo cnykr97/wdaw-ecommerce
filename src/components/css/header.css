@@ -55,11 +55,10 @@
     right: 10px
 }
 
-#services-dropdown {
+#services-dropdown,
+#pc-dropdown,
+#sales-dropdown {
     display: none;
-    /* add transition when its display is block */
-    transition: display 0.5s;
-
 }
 
 .search {
@@ -86,12 +85,28 @@
     color: #fff;
 }
 
-#signin-modal .modal-title {
+.signin-modal .modal-title,
+.signin-modal .modal-footer .btn-primary {
     margin-left: calc(50% - 2rem);
 }
 
+.signin-modal .modal-footer .btn-primary {
+    min-width: 150px;
 
+}
 
+.modal-logo img {
+    margin-right: calc(50% - 5rem);
+}
+
+.signin-modal .modal-footer a {
+    color: blue;
+}
+
+.signin-modal .modal-footer a:hover {
+    color: blue;
+    text-decoration: underline;
+}
 
 
 
@@ -135,6 +150,7 @@
         position: absolute;
         width: 30vw;
         padding-right: 0.5rem;
+        border: 2px solid #000
     }
 
     #services-dropdown ul {

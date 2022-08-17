@@ -60,7 +60,7 @@ const Header = () => {
                                         <li className='nav-item '>
                                             <hr className='m-1' />
                                         </li>
-                                        <li className='nav-item'>
+                                        <li className='nav-item pb-1'>
                                             <a className='nav-link' onClick={() => {
                                                 dropdownMenuHandleClick('sales-dropdown', 'sales-caret');
                                             }}>SALES<i className="fa-solid fa-caret-down" id='sales-caret'></i></a>
@@ -118,7 +118,7 @@ const Header = () => {
                                 </form>
                             </div>
                             <li className="nav-item">
-                                <a className="nav-link" ><i className="fa-regular fa-user fa-xl"></i></a>
+                                <a className="nav-link" data-bs-toggle="modal" data-bs-target="#exampleModal"><i className="fa-regular fa-user fa-xl"></i></a>
                             </li>
                             <li className="nav-item wishlist" onMouseMove={
                                 () => {
@@ -156,8 +156,38 @@ const Header = () => {
                 </div>
             </nav>
 
-            {/* login / signup modal */}
+            {/* login modal */}
 
+            <div class="modal fade signin-modal" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header d-flex flex-column">
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            <div className="modal-logo">
+                                <img src="img/wdaw-logo.png" alt="wdaw-logo" className='img-fluid' />
+                            </div>
+                            <h2 class="modal-title mx-auto" id="exampleModalLabel" style={{ color: 'blue' }}>Sign In</h2>
+                        </div>
+                        <div class="modal-body">
+                            <form>
+                                <div class="mb-3">
+                                    <label for="email" class="col-form-label">Email:</label>
+                                    <input type="email" class="form-control" id="email" required></input>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="password" class="col-form-label">Password:</label>
+                                    <input type="password" class="form-control" id="password" required></input>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="modal-footer d-flex flex-column">
+                            <button type="button" class="btn btn-primary mx-auto">Sign In</button>
+                            <p className='mx-auto mt-4'>Don't you have an account? <a>Sign up</a> now! </p>
+                            {/* <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button> */}
+                        </div>
+                    </div>
+                </div>
+            </div>
             {/* login / signup modal */}
 
         </div>
