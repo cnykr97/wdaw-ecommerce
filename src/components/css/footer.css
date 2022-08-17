@@ -1,0 +1,36 @@
+.footer {
+    background-color: #fff;
+}
+
+.footer {
+    padding: 1rem;
+}
+
+.footer .nav-item a:hover {
+    text-decoration: underline;
+}
+
+.footer .social-links .row {
+    justify-content: center;
+}
+
+/* Media Queries */
+
+@media (min-width: 768px) {
+    .footer-column {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .footer .social-links .col-1 {
+        padding: 1.4rem;
+    }
+
+    .footer .social-links .col-1 {
+        padding: 1.4rem;
+    }
+
+    .footer {
+        padding-bottom: 0;
+    }
+}

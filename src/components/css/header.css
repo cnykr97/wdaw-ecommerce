@@ -149,7 +149,8 @@
         background-color: #fff;
         position: absolute;
         width: 30vw;
-        padding-right: 0.5rem;
+        padding: 0.5rem;
+        padding-right: 2rem;
         border: 2px solid #000
     }
 
