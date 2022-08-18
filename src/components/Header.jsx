@@ -133,7 +133,7 @@ const Header = () => {
                                     }
                                 }>
                                 <a className="nav-link"><i className="fa-regular fa-heart  fa-xl" id='wishlist-icon'></i></a>
-                                <div id="wishlist-quantity"></div>
+                                <div id="wishlist-quantity">3</div>
                             </li>
                             <li className="nav-item shopping-cart"
                                 onMouseMove={
@@ -149,7 +149,7 @@ const Header = () => {
                                     }
                                 }>
                                 <a className="nav-link" ><i className="fa-regular fa-shopping-cart fa-xl" id='shopping-cart'></i></a>
-                                <div id="shopping-cart-quantity"></div>
+                                <div id="shopping-cart-quantity">2</div>
                             </li>
                         </ul>
                     </div>
@@ -166,7 +166,7 @@ const Header = () => {
                             <div className="modal-logo">
                                 <img src="img/wdaw-logo.png" alt="wdaw-logo" className='img-fluid' />
                             </div>
-                            <h2 class="modal-title mx-auto" id="exampleModalLabel" style={{ color: 'blue' }}>Sign In</h2>
+                            <h2 class="modal-title mx-auto" id="exampleModalLabel" style={{ color: '#0d6efd' }}>Sign In</h2>
                         </div>
                         <div class="modal-body">
                             <form>

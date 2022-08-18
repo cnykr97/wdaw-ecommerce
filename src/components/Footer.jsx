@@ -20,7 +20,7 @@ const Footer = () => {
                                             Gülbahçe Caddesi, 14683 Sokak <br />
                                             Urla, İzmir</p>
                                         <p><a href="mailto:'wdawdevelopment@gmail.com'"><i class="fa-solid fa-envelope"></i> wdawdevelopment@gmail.com</a></p>
-                                        <p><a href="tel:+9005494569186"><i class="fa-solid fa-phone"></i> +90 0549 456 91 86</a></p>
+                                        <p><a href="tel:+9005494569186"><i class="fa-solid fa-phone"></i> +90 549 456 91 86</a></p>
                                     </div>
                                 </div>
                             </nav>

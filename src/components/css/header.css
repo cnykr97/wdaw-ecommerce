@@ -17,7 +17,7 @@
 }
 
 .header .nav-icons {
-    background-color: lightgrey;
+    background-color: #d3d3d3;
     border-radius: 10px;
 }
 
@@ -41,18 +41,20 @@
 
 #wishlist-quantity,
 #shopping-cart-quantity {
-    width: 15px;
-    height: 15px;
-    font-weight: 500;
-    border: 2px solid #000;
+    width: 17px;
+    height: 17px;
+    font-weight: 700;
+    font-size: 0.6rem;
+    color: #000;
+    border: 2px solid #0d6efd;
     border-radius: 50%;
-    background-color: transparent;
+    background-color: #d3d3d3;
     display: flex;
     justify-content: center;
     text-align: center;
     position: absolute;
-    top: 0;
-    right: 10px
+    top: 2px;
+    right: 15px
 }
 
 #services-dropdown,
@@ -67,7 +69,7 @@
 
 #search-dropdown {
     display: none;
-    background-color: lightgrey;
+    background-color: #d3d3d3;
     padding: 1rem 2rem;
     width: 40vw;
     border-radius: 10px 0 0 10px;
@@ -79,6 +81,7 @@
 #search-dropdown button {
     border: 1px solid #000
 }
+
 
 #search-dropdown button:hover {
     background-color: #000;
@@ -100,11 +103,11 @@
 }
 
 .signin-modal .modal-footer a {
-    color: blue;
+    color: #0d6efd;
 }
 
 .signin-modal .modal-footer a:hover {
-    color: blue;
+    color: #0d6efd;
     text-decoration: underline;
 }
 
