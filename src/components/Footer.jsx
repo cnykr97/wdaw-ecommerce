@@ -80,13 +80,13 @@ const Footer = () => {
                                 <a target="_blank" href='https://www.facebook.com'><i class="fa-brands fa-facebook-f fa-lg"></i></a>
                             </div>
                             <div className="col-1">
-                                <a target="_" href='https://www.instagram.com'><i class="fa-brands fa-instagram fa-lg"></i></a>
+                                <a target="_blank" href='https://www.instagram.com'><i class="fa-brands fa-instagram fa-lg"></i></a>
                             </div>
                             <div className="col-1">
-                                <a target="_" href='https://www.twitter.com'><i class="fa-brands fa-twitter fa-lg"></i></a>
+                                <a target="_blank" href='https://www.twitter.com'><i class="fa-brands fa-twitter fa-lg"></i></a>
                             </div>
                             <div className="col-1">
-                                <a target="_" href='https://www.linkedin.com'><i class="fa-brands fa-linkedin fa-lg"></i></a>
+                                <a target="_blank" href='https://www.linkedin.com'><i class="fa-brands fa-linkedin fa-lg"></i></a>
                             </div>
                         </div>
                     </div>

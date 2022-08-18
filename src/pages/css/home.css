@@ -1,0 +1,171 @@
+/* Carousel Banner */
+
+.carousel-banner {
+    padding: 0;
+    margin-bottom: 2rem;
+}
+
+.carousel-banner .carousel-inner {
+    border-radius: 10px;
+}
+
+.carousel-banner .carousel-item img {
+    border-radius: 10px;
+    height: 450px;
+}
+
+.carousel-banner .sales img {
+    min-height: 250px;
+    max-height: 300px;
+    width: 100%;
+    border-radius: 10px;
+}
+
+.carousel-banner .sales .follow-sales {
+    justify-content: center;
+    font-size: 0.9rem;
+    padding: 1rem;
+}
+
+.carousel-banner .sales a {
+    text-align: center;
+}
+
+.carousel-banner .sales button {
+    border: 2px solid #000;
+    border-radius: 10px;
+    background-color: transparent;
+    padding: 0.5rem 2rem;
+}
+
+.carousel-banner .sales button:hover {
+    background-color: #000;
+    color: #fff;
+}
+
+.carousel-banner .carousel-item {
+    position: relative;
+}
+
+.carousel-banner .carousel-item-content {
+    color: #fff;
+    position: absolute;
+    top: 45%;
+    left: 1rem;
+    z-index: 999;
+}
+
+.carousel-banner .carousel-item-content p {
+    width: 30vw;
+}
+
+.carousel-banner .carousel-item-content button {
+    border: 2px solid #fff;
+    color: #fff;
+    background-color: transparent;
+    font-size: 0.8rem;
+    padding: 0.5rem 0.75rem;
+    border-radius: 20px;
+}
+
+/* /Carousel Banner */
+
+
+/* Popular Items */
+
+.popular-items {
+    margin-top: 3rem;
+}
+
+.popular-items-header {
+    display: flex;
+    flex-direction: column;
+}
+
+.popular-items-header span {
+    font-size: 2rem;
+    font-weight: 500;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+    background-color: #d3d3d3;
+    z-index: 2;
+}
+
+.popular-items-header-hr {
+    position: relative;
+    top: -2.3rem;
+}
+
+.popular-items .product-tile {
+    border: 2px solid #000;
+    height: 100%;
+    width: 100%;
+    margin: 0 1rem;
+}
+
+/* /Popular Items */
+
+
+/* Static Banner */
+
+
+.static-banner {
+    position: relative;
+}
+
+.static-banner-content {
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    top: 20%;
+    color: #fff;
+    text-align: center;
+    left: 25%;
+}
+
+/* /Static Banner */
+
+
+/* Media Queries */
+
+@media (min-width: 1500px) {
+    .carousel-banner .carousel-item img {
+
+        height: 600px;
+    }
+
+    .carousel-banner .sales img {
+        max-height: 460px;
+        width: 100%;
+
+    }
+}
+
+@media (max-width: 768px) {
+    .carousel-banner .carousel-item img {
+        height: 350px;
+    }
+
+    .carousel-banner .carousel-item-content {
+        font-size: 0.75rem;
+        top: 25%;
+    }
+
+    .carousel-banner .carousel-item-content h1 {
+        font-size: 1.4rem;
+    }
+
+    .carousel-banner .carousel-item-content button {
+        font-size: 0.5rem;
+    }
+
+    .static-banner-content {
+        top: 20%;
+        font-size: 0.6rem;
+    }
+
+    .static-banner-content h1 {
+        font-size: 1.4rem;
+    }
+
+}

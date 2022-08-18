@@ -1,5 +1,6 @@
 .header {
     background-color: #fff;
+    margin-top: 1rem;
 }
 
 .header .disabled {
@@ -41,8 +42,8 @@
 
 #wishlist-quantity,
 #shopping-cart-quantity {
-    width: 17px;
-    height: 17px;
+    width: 16px;
+    height: 16px;
     font-weight: 700;
     font-size: 0.6rem;
     color: #000;
@@ -53,14 +54,15 @@
     justify-content: center;
     text-align: center;
     position: absolute;
-    top: 2px;
-    right: 15px
+    top: 3%;
+    right: 15%
 }
 
 #services-dropdown,
 #pc-dropdown,
 #sales-dropdown {
     display: none;
+    z-index: 999;
 }
 
 .search {
@@ -167,7 +169,14 @@
 
 }
 
+@media (min-width: 1000px) {
+    .header .nav-icons {
+        padding: 1rem;
+    }
+}
+
 @media (min-width: 1200px) {
+
     .header .navbar-collapse li {
         margin-left: 2rem;
     }
@@ -178,6 +187,15 @@
 
     .header .nav-icons {
         padding: 1rem 2rem;
+    }
+
+    #wishlist-quantity,
+    #shopping-cart-quantity {
+        font-size: 0.7rem;
+        height: 18px;
+        width: 18px;
+        top: 3%;
+        right: 25%
     }
 
 }
