@@ -14,6 +14,12 @@
     height: 450px;
 }
 
+.carousel-banner .sales {
+    padding: 0;
+    background-color: #fff;
+    border-radius: 10px;
+}
+
 .carousel-banner .sales img {
     min-height: 250px;
     max-height: 300px;
@@ -96,12 +102,12 @@
     top: -2.3rem;
 }
 
-.popular-items .product-tile {
-    border: 2px solid #000;
-    height: 100%;
-    width: 100%;
-    margin: 0 1rem;
+.popular-items .product-tiles {
+    justify-content: center;
+
 }
+
+
 
 /* /Popular Items */
 
@@ -138,6 +144,18 @@
         max-height: 460px;
         width: 100%;
 
+    }
+
+    .carousel-item-content {
+        margin-top: 4rem;
+    }
+
+    .carousel-item-content p {
+        margin-top: 2rem;
+    }
+
+    .carousel-banner .carousel-item-content button {
+        padding: 0.5rem 2rem;
     }
 }
 

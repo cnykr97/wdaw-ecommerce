@@ -4,6 +4,8 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Home from "./pages/Home";
 import Modals from "./components/Modals";
 
+// npx json-server --watch data/db.json --port 8000
+
 function App() {
   return (
     <Router>

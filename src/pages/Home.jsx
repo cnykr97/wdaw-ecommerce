@@ -1,6 +1,12 @@
+import TileListCreator from '../components/TileListCreator';
+import useFetch from '../useFetch';
 import './css/home.css';
 
+
 const Home = () => {
+
+    const { data: products, isPending, error } = useFetch("http://localhost:8000/products");
+
     return (
         <div className="home">
             <section className="container-fluid carousel-banner">
@@ -24,7 +30,7 @@ const Home = () => {
                                 </div>
                                 <div className="carousel-item">
                                     <img src="img/carousel-banner/2.jpg" className="d-block w-100" alt="shopping"></img>
-                                    <div className="carousel-item-content slide-2-content">
+                                    <div className="carousel-item-content">
                                         <h1>Be the best at your work</h1>
                                         <p>Improve your work performance and client experience with powerful and fast solutions that we will provide and specialized for you.</p>
                                         <button>WIEV ALL OUR PRODUCTS</button>
@@ -32,7 +38,7 @@ const Home = () => {
                                 </div>
                                 <div className="carousel-item">
                                     <img src="img/carousel-banner/3.jpg" className="d-block w-100" alt="bridge wiev"></img>
-                                    <div className="carousel-item-content slide-3-content">
+                                    <div className="carousel-item-content">
                                         <h1>Be the best at your work</h1>
                                         <p>Improve your work performance and client experience with powerful and fast solutions that we will provide and specialized for you.</p>
                                         <button>WIEV ALL OUR PRODUCTS</button>
@@ -45,7 +51,8 @@ const Home = () => {
                         <img src="img/sales.jpg" alt="sales" />
                         <div className="follow-sales mt-4 d-flex flex-column">
                             <p className='text-center'>Follow us on Instagram and be aware of the discounts!</p>
-                            <a target="_blank" href='https://www.instagram.com'><button><i class="fa-brands fa-instagram fa-lg"></i> FOLLOW</button></a>
+                            {/* eslint-disable-next-line */}
+                            <a target="_blank" href='https://www.instagram.com'><button><i className="fa-brands fa-instagram fa-lg"></i> FOLLOW</button></a>
 
                         </div>
                     </div>
@@ -58,33 +65,11 @@ const Home = () => {
                         <span>Popular Items</span>
                         <hr className='popular-items-header-hr' />
                     </div>
-                    <div className="product-tiles">
-                        <div className="col-12 col-md-6 col-lg-4 col-xl-3 ">
 
-                        </div>
-                        <div className="d-none d-md-flex col-md-6 col-lg-4 col-xl-3 product-tile">
+                    {error && <p>{error}</p>}
+                    {isPending && <p><i className="fa-solid fa-spinner fa-spin-pulse fa-xl"></i></p>}
+                    {products && <TileListCreator products={products} section='popular-items' />}
 
-                        </div>
-                        <div className="d-none d-lg-flex col-lg-4 col-xl-3 product-tile">
-
-                        </div>
-                        <div className="d-none d-lg-flex col-lg-4 col-xl-3 product-tile">
-
-                        </div>
-                        <div className="d-none d-xl-flex col-xl-3 product-tile">
-
-                        </div>
-                        <div className="d-none d-xl-flex col-xl-3 product-tile">
-
-                        </div>
-                        <div className="d-none d-xl-flex col-xl-3 product-tile">
-
-                        </div>
-                        <div className="d-none d-xl-flex col-xl-3 product-tile">
-
-                        </div>
-
-                    </div>
                 </div>
 
             </section>
@@ -102,3 +87,29 @@ const Home = () => {
 }
 
 export default Home;
+
+
+/* <div className="col-12 col-md-6  col-xl-3 ">
+
+                        </div>
+                        <div className="d-none d-md-flex col-md-6  col-xl-3 ">
+
+                        </div>
+                        <div className="d-none d-md-flex col-md-6  col-xl-3 ">
+
+                        </div>
+                        <div className="d-none d-md-flex col-md-6  col-xl-3 ">
+
+                        </div>
+                        <div className="d-none d-xl-flex col-xl-3 ">
+
+                        </div>
+                        <div className="d-none d-xl-flex col-xl-3 ">
+
+                        </div>
+                        <div className="d-none d-xl-flex col-xl-3 ">
+
+                        </div>
+                        <div className="d-none d-xl-flex col-xl-3 ">
+
+                        </div> */
