@@ -62,7 +62,7 @@ const Home = () => {
             <section className="container-fluid popular-items">
                 <div className="row">
                     <div className="col-12 popular-items-header">
-                        <span>Popular Items</span>
+                        <span>POPULAR ITEMS</span>
                         <hr className='popular-items-header-hr' />
                     </div>
 

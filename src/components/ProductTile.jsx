@@ -1,6 +1,7 @@
 import './css/product-tile.css';
 
 const ProductTile = ({ product }) => {
+    const sidebarID = "sidebar" + product.id;
 
     return (
         <div className="product-tile">
@@ -10,14 +11,32 @@ const ProductTile = ({ product }) => {
                 <p>{product.info}</p>
                 <div className='price'>{product.price}</div>
             </div>
-            <div className="sidebar ">
-                <button className="add-to-cart">
+            <div id={sidebarID} className="sidebar" >
+                <button className="add-to-cart sidebar-item"
+                    onMouseOver={() => {
+                        document.getElementById(sidebarID).style.zIndex = "-1";
+                    }}
+                    onMouseOut={() => {
+                        document.getElementById(sidebarID).style.zIndex = "-2";
+                    }}>
                     <span>ADD TO CART</span>
                 </button>
-                <button className="add-to-wishlist">
+                <button className="add-to-wishlist sidebar-item"
+                    onMouseOver={() => {
+                        document.getElementById(sidebarID).style.zIndex = "-1";
+                    }}
+                    onMouseOut={() => {
+                        document.getElementById(sidebarID).style.zIndex = "-2";
+                    }}>
                     <span>ADD TO WISHLIST</span>
                 </button>
-                <button className="more-info">
+                <button className="more-info sidebar-item"
+                    onMouseOver={() => {
+                        document.getElementById(sidebarID).style.zIndex = "-1";
+                    }}
+                    onMouseOut={() => {
+                        document.getElementById(sidebarID).style.zIndex = "-2";
+                    }}>
                     <span>MORE INFO</span>
                 </button>
             </div>

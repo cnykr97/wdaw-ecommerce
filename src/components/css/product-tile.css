@@ -13,6 +13,8 @@
     border-radius: 10px 10px 0 0;
     width: 100%;
     height: 70%;
+    position: relative;
+    z-index: -1;
 }
 
 .product-tile .info {
@@ -51,39 +53,39 @@
 }
 
 .product-tile .sidebar {
-    height: 90%;
+    height: 70%;
     margin-top: 1.5rem;
     background-color: #5194f9;
     width: 50px;
     position: absolute;
     top: 0;
-    right: 0;
-    transition: right 0.3s ease-in-out;
-    border-radius: 0 2px 2px 0;
+    left: 0;
+    transition: left 0.3s ease-in-out;
+    border-radius: 10px 0 0 10px;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    z-index: -1;
+    z-index: -2;
 }
 
 .product-tile:hover .sidebar {
-    right: -50px;
+    left: -50px;
 }
 
 .product-tile .sidebar button {
     border: none;
+    border-radius: 0 10px 10px 0;
     color: #fff;
     padding: 1rem;
     width: 50px;
     height: 50px;
     overflow: hidden;
     transition: all 0.3s ease-in-out;
-    margin: 1rem 0;
-
+    margin: 0.75rem 0;
 }
 
 .product-tile .sidebar .add-to-cart {
-    background: transparent url("../../../public/img/product-tiles/sidebar-icons/shopping-cart.jpg") no-repeat left
+    background: transparent url("../../../public/img/product-tiles/sidebar-icons/shopping-cart.jpg") no-repeat left;
 }
 
 .product-tile .sidebar .add-to-wishlist {
@@ -97,12 +99,10 @@
 .product-tile .sidebar button span {
     white-space: nowrap;
     margin-left: 40px;
-    font-size: 0.9rem;
-    position: relative;
-    z-index: 3;
+    font-size: 1rem;
 }
 
 .product-tile .sidebar button:hover {
-    width: 180px;
+    width: 200px;
     background-color: #5194f9;
 }
