@@ -1,3 +1,17 @@
+Sample e-commerce website by Wdaw
+
+If you don't have JSON Server installed,
+
+1- install by npm:
+	npm install -g json-server
+
+If you already have, start database:
+	npx json-server --watch data/db.json --port 8000
+
+for more information about typicode JSON Server : https://github.com/typicode/json-server
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
