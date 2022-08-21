@@ -131,6 +131,57 @@
 
 /* /Static Banner */
 
+/* Benefits */
+
+.benefits {
+    margin: 2rem -2rem;
+}
+
+.benefits .seperate {
+    width: 100%;
+    height: 10vh;
+}
+
+.benefits .row {
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    padding: 4rem 0;
+    position: relative;
+}
+
+
+.benefits .row-bg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    opacity: 0.25;
+    padding: 0;
+}
+
+
+.benefits .col-6 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-left: 1rem;
+}
+
+.benefits .col-6 h1 {
+    color: #5194f9;
+    font-weight: 600;
+}
+
+.benefits img {
+    width: 100%;
+    height: auto;
+}
+
+/* /Benefits */
+
 
 /* Media Queries */
 

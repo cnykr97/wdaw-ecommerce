@@ -4,7 +4,7 @@ const ProductTile = ({ product }) => {
     const sidebarID = "sidebar" + product.id;
 
     return (
-        <div className="product-tile">
+        <div className="product-tile" data-aos="fade-in">
             <img src={product.image} alt="Product" />
             <div className="info">
                 <h5>{product.name}</h5>
