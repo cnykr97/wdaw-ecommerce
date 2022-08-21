@@ -80,7 +80,7 @@
 /* Popular Items */
 
 .popular-items {
-    margin-top: 3rem;
+    margin: 3rem 0;
 }
 
 .popular-items-header {
@@ -117,6 +117,8 @@
 
 .static-banner {
     position: relative;
+    margin: 0 -2rem;
+
 }
 
 .static-banner-content {
@@ -134,51 +136,51 @@
 /* Benefits */
 
 .benefits {
-    margin: 2rem -2rem;
+    margin: 0 -2rem;
+    background-color: #fff;
+    padding: 4rem 0;
 }
 
 .benefits .seperate {
     width: 100%;
-    height: 10vh;
+    height: 5vh;
 }
 
 .benefits .row {
-    background-color: #fff;
-    display: flex;
-    justify-content: center;
-    padding: 4rem 0;
-    position: relative;
+    margin: 0;
 }
 
-
-.benefits .row-bg {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    opacity: 0.25;
-    padding: 0;
+.benefits .improve,
+.benefits .method {
+    justify-content: flex-end;
 }
 
+.benefits .fast-delivery {
+    justify-content: flex-start;
+}
 
-.benefits .col-6 {
+.benefits .col-3 {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
-    margin-left: 1rem;
+    margin: 0 3rem;
 }
 
-.benefits .col-6 h1 {
+.benefits .col-7 img {
+    width: 100%;
+    height: 50vh;
+}
+
+.benefits h1 {
     color: #5194f9;
     font-weight: 600;
 }
 
-.benefits img {
-    width: 100%;
-    height: auto;
-}
+
+
+
 
 /* /Benefits */
 

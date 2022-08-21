@@ -4,12 +4,12 @@ const ProductTile = ({ product }) => {
     const sidebarID = "sidebar" + product.id;
 
     return (
-        <div className="product-tile" data-aos="fade-in">
+        <div className="product-tile" >
             <img src={product.image} alt="Product" />
             <div className="info">
                 <h5>{product.name}</h5>
-                <p>{product.info}</p>
-                <div className='price'>{product.price}</div>
+                <p >{product.info}</p>
+                <div className='price' >{product.price}</div>
             </div>
             <div id={sidebarID} className="sidebar" >
                 <button className="add-to-cart sidebar-item"

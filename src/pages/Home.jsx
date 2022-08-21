@@ -8,7 +8,11 @@ const Home = () => {
 
     const { data: products, isPending, error } = useFetch("http://localhost:8000/products");
 
-    AOS.init();
+    AOS.init(
+        {
+            offset: 200,
+        }
+    );
     return (
         <div className="home">
             <section className="container-fluid carousel-banner">
@@ -78,52 +82,52 @@ const Home = () => {
 
             <section className="benefits" >
                 <div className="container-fluid">
-                    <div className="row fast-delivery">
-                        <div className="col-3" data-aos="fade-right">
-                            <img src="img/benefits/fast-delivery.jpg" alt="blue fast delivery icon" />
+                    <div className="row improve">
+                        <div className="col-3" data-aos="fade-right" data-aos-duration="1000">
+                            <img src="img/benefits/improve.jpg" alt="blue improve icon" />
+                            <h1 className='mt-2'>IMPROVE YOUR BUSINESS</h1>
+                            <p>A highly competent team that consistently boosts each client's ROI while reducing their business risk</p>
                         </div>
-                        <div className="col-6" data-aos="fade-left" >
+                        <div className="col-7"  >
+                            <img className='row-bg' src="img/benefits/improve-bg.jpg" alt="" />
+                        </div>
+                    </div>
+                    <div className="seperate">
+
+                    </div>
+                    <div className="row fast-delivery">
+                        <div className="col-7" >
+                            <img src="img/benefits/fast-delivery-bg.jpg" alt="" />
+                        </div>
+                        <div className="col-3" data-aos="fade-left" data-aos-duration="1000">
+                            <img src="img/benefits/fast-delivery.jpg" alt="blue fast delivery icon" />
                             <h1>FAST DELIVERY</h1>
                             <p>Our ongoing commitment to quick service delivery and developing next-generation skills</p>
                         </div>
-                        {/* <img className='row-bg' src="img/benefits/fast-delivery-bg.jpg" alt="" /> */}
                     </div>
                     <div className="seperate">
 
                     </div>
-                    <div className="row improve">
-                        <div className="col-3" data-aos="fade-right" >
-                            <img src="img/benefits/improve.jpg" alt="blue improve icon" />
-                        </div>
-                        <div className="col-6" data-aos="fade-left" >
-                            <h1>IMPROVE YOUR WORK</h1>
-                            <p>A highly competent team that consistently boosts each client's ROI while reducing their business risk</p>
-                        </div>
-                        {/* <img className='row-bg' src="img/benefits/improve-bg.jpg" alt="" /> */}
-                    </div>
-                    <div className="seperate">
-
-                    </div>
-                    <div className="row method">
-                        <div className="col-3" data-aos="fade-right" >
+                    <div className="row method ">
+                        <div className="col-3" data-aos="fade-right" data-aos-duration="1000">
                             <img src="img/benefits/recycle.jpg" alt="blue recycle icon" />
-                        </div>
-                        <div className="col-6" data-aos="fade-left" >
                             <h1>METHOD</h1>
                             <p>A structured process created to produce quantifiable economic outcomes and predictable expenses</p>
                         </div>
-                        {/* <img className='row-bg' src="img/benefits/method-bg.jpg" alt="" /> */}
+                        <div className="col-7" >
+                            <img className='row-bg' src="img/benefits/method-bg.jpg" alt="" />
+                        </div>
                     </div>
                 </div>
             </section>
 
-            {/* <section className="static-banner">
+            <section className="static-banner">
                 <img src="img/static-banner.png" alt="banner wdaw theme" className='w-100 d-block' />
                 <div className="static-banner-content">
                     <h1>Banner Wdaw Theme</h1>
                     <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vero reprehenderit velit, ex a quos necessitatibus totam, autem quaerat </p>
                 </div>
-            </section> */}
+            </section>
         </div>
 
     );
