@@ -2,7 +2,7 @@ Sample e-commerce website by Wdaw
 
 If you don't have JSON Server installed,
 
-1- install by npm:
+install by npm:
 	npm install -g json-server
 
 If you already have, start database:
