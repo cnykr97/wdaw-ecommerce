@@ -8,7 +8,7 @@ const ProductTile = ({ product }) => {
             <img src={product.image} alt="Product" />
             <div className="info">
                 <h5>{product.name}</h5>
-                <p >{product.info}</p>
+                <p data-aos="fade-in" data-aos-offset="0">{product.info}</p>
                 <div className='price' >{product.price}</div>
             </div>
             <div id={sidebarID} className="sidebar" >
