@@ -9,14 +9,14 @@ import { useEffect, useState } from "react";
 
 function App() {
 
-  const [wishlistItems, setwishlistItems] = useState([]);
-  const [wishlistNumber, setwishlistNumber] = useState(0);
+  const [wishlistItems, setWishlistItems] = useState([]);
+  const [wishlistNumber, setWishlistNumber] = useState(0);
 
   const [cartItems, setCartItems] = useState([]);
   const [cartNumber, setCartNumber] = useState(0);
 
   const getters = { wishlistItems, wishlistNumber, cartItems, cartNumber }
-  const setters = { setwishlistItems, setwishlistNumber, setCartItems, setCartNumber }
+  const setters = { setWishlistItems, setWishlistNumber, setCartItems, setCartNumber }
 
   useEffect(() => {
     fetch("http://localhost:8000/wishlist")
@@ -27,9 +27,9 @@ function App() {
         return res.json();
       })
       .then(data => {
-        console.log("wishlist fetch")
-        setwishlistItems(data.items)
-        setwishlistNumber(data.number)
+        setWishlistItems(data)
+        console.log(data)
+        setWishlistNumber(data.length)
       })
   }, [])
 
@@ -43,8 +43,8 @@ function App() {
       })
       .then(data => {
         console.log("cart fetch")
-        setCartItems(data.items)
-        setCartNumber(data.number)
+        setCartItems(data)
+        setCartNumber(data.length)
       })
   }, [])
 

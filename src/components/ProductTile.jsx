@@ -19,11 +19,16 @@ const ProductTile = ({ product, getters, setters }) => {
                     onMouseOut={() => {
                         document.getElementById(sidebarID).style.zIndex = "-2";
                     }}
-                    onClick={() => {
-                        console.log(getters.cartNumber)
+                    onClick={(e) => {
+                        e.preventDefault();
                         setters.setCartNumber(getters.cartNumber + 1)
-                        console.log(getters.cartNumber)
-                    }}>
+                        fetch("http://localhost:8000/cart", {
+                            method: 'POST',
+                            headers: { "Content-Type": "application/json" },
+                            body: JSON.stringify(product)
+                        })
+                    }}
+                >
                     <span>ADD TO CART</span>
                 </button>
                 <button className="add-to-wishlist sidebar-item"
@@ -32,6 +37,15 @@ const ProductTile = ({ product, getters, setters }) => {
                     }}
                     onMouseOut={() => {
                         document.getElementById(sidebarID).style.zIndex = "-2";
+                    }}
+                    onClick={(e) => {
+                        e.preventDefault();
+                        setters.setWishlistNumber(getters.wishlistNumber + 1)
+                        fetch("http://localhost:8000/wishlist", {
+                            method: 'POST',
+                            headers: { "Content-Type": "application/json" },
+                            body: JSON.stringify(product)
+                        })
                     }}>
                     <span>ADD TO WISHLIST</span>
                 </button>

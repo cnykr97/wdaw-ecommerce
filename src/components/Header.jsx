@@ -126,12 +126,16 @@ const Header = ({ getters, setters }) => {
                                 () => {
                                     const wishlistIcon = document.getElementById('wishlist-icon');
                                     wishlistIcon.classList.add('fa-beat');
+                                    const wishlistMenu = document.getElementById('wishlist-menu');
+                                    wishlistMenu.style.right = '0'
                                 }
                             }
                                 onMouseOut={
                                     () => {
                                         const wishlistIcon = document.getElementById('wishlist-icon');
                                         wishlistIcon.classList.remove('fa-beat');
+                                        const wishlistMenu = document.getElementById('wishlist-menu');
+                                        wishlistMenu.style.right = '-26vw'
                                     }
                                 }>
                                 <a className="nav-link"><i className="fa-regular fa-heart  fa-xl" id='wishlist-icon'></i></a>
@@ -143,12 +147,17 @@ const Header = ({ getters, setters }) => {
                                     () => {
                                         const shoppingCartIcon = document.getElementById('shopping-cart');
                                         shoppingCartIcon.classList.add('fa-bounce');
+                                        const cartMenu = document.getElementById('cart-menu');
+                                        cartMenu.style.right = '0'
                                     }
                                 }
                                 onMouseOut={
                                     () => {
                                         const shoppingCartIcon = document.getElementById('shopping-cart');
                                         shoppingCartIcon.classList.remove('fa-bounce');
+
+                                        const cartMenu = document.getElementById('cart-menu');
+                                        cartMenu.style.right = '-26vw'
                                     }
                                 }>
                                 <a className="nav-link" ><i className="fa-regular fa-shopping-cart fa-xl" id='shopping-cart'></i></a>
@@ -158,6 +167,12 @@ const Header = ({ getters, setters }) => {
                     </div>
                 </div>
             </nav>
+            <div id='wishlist-menu' className="header-icon-menu">
+                <h1>wishlist</h1>
+            </div>
+            <div id='cart-menu' className="header-icon-menu">
+                <h1>cart</h1>
+            </div>
         </div>
     );
 }
