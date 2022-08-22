@@ -4,7 +4,7 @@ import './css/home.css';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
-const Home = () => {
+const Home = ({ getters, setters }) => {
 
     const { data: products, isPending, error } = useFetch("http://localhost:8000/products");
 
@@ -74,7 +74,7 @@ const Home = () => {
 
                     {error && <p>{error}</p>}
                     {isPending && <p><i className="fa-solid fa-spinner fa-spin-pulse fa-xl"></i></p>}
-                    {products && <TileListCreator products={products} section='popular-items' />}
+                    {products && <TileListCreator products={products} getters={getters} setters={setters} section='popular-items' />}
 
                 </div>
 
@@ -111,7 +111,7 @@ const Home = () => {
                     <div className="row method ">
                         <div className="col-3" data-aos="fade-right" data-aos-duration="1000">
                             <img src="img/benefits/recycle.jpg" alt="blue recycle icon" />
-                            <h1>METHOD</h1>
+                            <h1>EFFICIENT METHODS</h1>
                             <p>A structured process created to produce quantifiable economic outcomes and predictable expenses</p>
                         </div>
                         <div className="col-7" >

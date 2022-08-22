@@ -70,14 +70,15 @@
 }
 
 #search-dropdown {
-    display: none;
     background-color: #d3d3d3;
     padding: 1rem 2rem;
     width: 40vw;
     border-radius: 10px 0 0 10px;
     position: absolute;
-    bottom: -5rem;
+    top: -100px;
     right: 0;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+    transition: top 0.4s ease-in-out;
 }
 
 #search-dropdown button {

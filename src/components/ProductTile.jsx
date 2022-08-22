@@ -1,6 +1,6 @@
 import './css/product-tile.css';
 
-const ProductTile = ({ product }) => {
+const ProductTile = ({ product, getters, setters }) => {
     const sidebarID = "sidebar" + product.id;
 
     return (
@@ -18,6 +18,11 @@ const ProductTile = ({ product }) => {
                     }}
                     onMouseOut={() => {
                         document.getElementById(sidebarID).style.zIndex = "-2";
+                    }}
+                    onClick={() => {
+                        console.log(getters.cartNumber)
+                        setters.setCartNumber(getters.cartNumber + 1)
+                        console.log(getters.cartNumber)
                     }}>
                     <span>ADD TO CART</span>
                 </button>

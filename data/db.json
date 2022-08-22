@@ -1,4 +1,12 @@
 {
+    "wishlist": {
+        "number": 3,
+        "items": []
+    },
+    "cart": {
+        "number": 2,
+        "items": []
+    },
     "products": [
         {
             "image": "img/product-tiles/1.jpg",

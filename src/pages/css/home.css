@@ -239,4 +239,16 @@
         font-size: 1.4rem;
     }
 
+    .benefits .col-7 {
+        display: none;
+    }
+
+    .benefits .row {
+        justify-content: center;
+    }
+
+    .benefits .col-3 {
+        width: 80%;
+    }
+
 }

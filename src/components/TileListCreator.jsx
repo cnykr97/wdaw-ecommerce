@@ -1,6 +1,6 @@
 import ProductTile from "./ProductTile";
 
-const TileListCreator = ({ products, section }) => {
+const TileListCreator = ({ products, section, getters, setters }) => {
 
     return (
         <div className="product-tiles row ">
@@ -8,7 +8,7 @@ const TileListCreator = ({ products, section }) => {
                 if (product.isPopular === true) {
                     return (
                         <div className="tile-wrapper col d-flex justify-content-center" key={product.id}>
-                            <ProductTile product={product} />
+                            <ProductTile product={product} getters={getters} setters={setters} />
                         </div>
                     )
                 }

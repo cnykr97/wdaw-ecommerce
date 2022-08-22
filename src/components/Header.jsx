@@ -1,7 +1,8 @@
 import './css/header.css';
 import { Link } from 'react-router-dom';
+import { useState } from 'react';
 
-const Header = () => {
+const Header = ({ getters, setters }) => {
 
     const dropdownMenuHandleClick = (menuID, caretID) => {
         const dropdownMenu = document.getElementById(menuID);
@@ -101,10 +102,11 @@ const Header = () => {
                             <li className="nav-item search" onClick={
                                 () => {
                                     let dropdownMenu = document.getElementById('search-dropdown');
-                                    if (dropdownMenu.style.display === 'block') {
-                                        dropdownMenu.style.display = 'none';
+                                    if (dropdownMenu.style.top === '120px') {
+                                        dropdownMenu.style.top = '-100px';
                                     } else {
-                                        dropdownMenu.style.display = 'block';
+                                        dropdownMenu.style.top = '-100px';
+                                        dropdownMenu.style.top = '120px';
                                     }
                                 }
                             }>
@@ -133,7 +135,8 @@ const Header = () => {
                                     }
                                 }>
                                 <a className="nav-link"><i className="fa-regular fa-heart  fa-xl" id='wishlist-icon'></i></a>
-                                <div id="wishlist-quantity">3</div>
+
+                                <div id="wishlist-quantity">{getters.wishlistNumber}</div>
                             </li>
                             <li className="nav-item shopping-cart"
                                 onMouseMove={
@@ -149,7 +152,7 @@ const Header = () => {
                                     }
                                 }>
                                 <a className="nav-link" ><i className="fa-regular fa-shopping-cart fa-xl" id='shopping-cart'></i></a>
-                                <div id="shopping-cart-quantity">2</div>
+                                <div id="shopping-cart-quantity">{getters.cartNumber}</div>
                             </li>
                         </ul>
                     </div>
