@@ -28,7 +28,6 @@ function App() {
       })
       .then(data => {
         setWishlistItems(data)
-        console.log(data)
         setWishlistNumber(data.length)
       })
   }, [])

@@ -1,6 +1,5 @@
 import './css/header.css';
 import { Link } from 'react-router-dom';
-import { useState } from 'react';
 
 const Header = ({ getters, setters }) => {
 
@@ -19,6 +18,7 @@ const Header = ({ getters, setters }) => {
     }
 
     return (
+
         <div className="header sticky-top">
             <nav className="navbar navbar-expand-md ">
                 <div className="container-fluid">
@@ -126,18 +126,23 @@ const Header = ({ getters, setters }) => {
                                 () => {
                                     const wishlistIcon = document.getElementById('wishlist-icon');
                                     wishlistIcon.classList.add('fa-beat');
-                                    const wishlistMenu = document.getElementById('wishlist-menu');
-                                    wishlistMenu.style.right = '0'
                                 }
                             }
                                 onMouseOut={
                                     () => {
                                         const wishlistIcon = document.getElementById('wishlist-icon');
                                         wishlistIcon.classList.remove('fa-beat');
-                                        const wishlistMenu = document.getElementById('wishlist-menu');
+                                    }
+                                }
+                                onClick={() => {
+                                    const wishlistMenu = document.getElementById('wishlist-menu');
+                                    if (wishlistMenu.style.right === '-26vw') {
+                                        wishlistMenu.style.right = '0'
+                                    } else {
                                         wishlistMenu.style.right = '-26vw'
                                     }
-                                }>
+
+                                }}>
                                 <a className="nav-link"><i className="fa-regular fa-heart  fa-xl" id='wishlist-icon'></i></a>
 
                                 <div id="wishlist-quantity">{getters.wishlistNumber}</div>
@@ -147,19 +152,23 @@ const Header = ({ getters, setters }) => {
                                     () => {
                                         const shoppingCartIcon = document.getElementById('shopping-cart');
                                         shoppingCartIcon.classList.add('fa-bounce');
-                                        const cartMenu = document.getElementById('cart-menu');
-                                        cartMenu.style.right = '0'
                                     }
                                 }
                                 onMouseOut={
                                     () => {
                                         const shoppingCartIcon = document.getElementById('shopping-cart');
                                         shoppingCartIcon.classList.remove('fa-bounce');
-
-                                        const cartMenu = document.getElementById('cart-menu');
+                                    }
+                                }
+                                onClick={() => {
+                                    const cartMenu = document.getElementById('cart-menu');
+                                    if (cartMenu.style.right === '-26vw') {
+                                        cartMenu.style.right = '0'
+                                    } else {
                                         cartMenu.style.right = '-26vw'
                                     }
-                                }>
+
+                                }}>
                                 <a className="nav-link" ><i className="fa-regular fa-shopping-cart fa-xl" id='shopping-cart'></i></a>
                                 <div id="shopping-cart-quantity">{getters.cartNumber}</div>
                             </li>
@@ -167,11 +176,49 @@ const Header = ({ getters, setters }) => {
                     </div>
                 </div>
             </nav>
-            <div id='wishlist-menu' className="header-icon-menu">
-                <h1>wishlist</h1>
+            <div id='wishlist-menu' className="header-icon-menu" style={{ right: '-26vw' }}>
+                <div className="container-fluid">
+                    <h5 className='header-icon-menu-header'>WISHLIST ITEMS</h5>
+                    {(getters.wishlistItems.length < 1) && <h1>You have not any items yet.</h1>}
+                    {(getters.wishlistItems.length > 0) && getters.wishlistItems.map(item => (
+                        <div className="row item" key={item.id}>
+                            <div className="col-4">
+                                <img src={item.image} alt={item.name} className='w-100 d-block' />
+                            </div>
+                            <div className="col-6 d-flex flex-column">
+                                <h5>{item.name}</h5>
+                                <p>{item.info} </p>
+                                <h4>${item.price}</h4>
+                            </div>
+                            <div className="col-2">
+                                {/* <button><i className="fa-regular fa-shopping-cart fa-lg"></i></button> */}
+                                <button><i className="fa-solid fa-trash-can fa-lg"></i></button>
+                            </div>
+                        </div>
+                    ))}
+                </div>
             </div>
-            <div id='cart-menu' className="header-icon-menu">
-                <h1>cart</h1>
+            <div id='cart-menu' className="header-icon-menu" style={{ right: '-26vw' }}>
+                <div className="container-fluid">
+                    <h5 className='header-icon-menu-header'>SHOPPING CART</h5>
+                    {(getters.wishlistItems.length < 1) && <h1>You have not any items yet.</h1>}
+                    {(getters.wishlistItems.length > 0) && getters.cartItems.map(item => (
+                        <div className="row item" key={item.id}>
+                            <div className="col-4">
+                                <img src={item.image} alt={item.name} />
+                            </div>
+                            <div className="col-6 d-flex flex-column">
+                                <h5>{item.name}</h5>
+                                <p>{item.info} </p>
+                                <h4>${item.price}</h4>
+                            </div>
+                            <div className="col-2">
+                                <button alt='remove item'><i className="fa-solid fa-trash-can fa-lg"></i></button>
+                            </div>
+                        </div>
+                    ))}
+                    <div className="row proceed"><button>PROCEED TO CHECKOUT</button></div>
+                </div>
             </div>
         </div>
     );
