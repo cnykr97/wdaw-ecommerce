@@ -123,7 +123,6 @@
     position: absolute;
     /* top: calc(131px + 1rem); */
     top: 130px;
-    right: -26vw;
     transition: right 0.5s ease-in-out;
 }
 
