@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Home from "./pages/Home";
 import Modals from "./components/Modals";
 import { useEffect, useState } from "react";
+import ProductDetail from "./pages/ProductDetail";
 
 // npx json-server --watch data/db.json --port 8000
 
@@ -55,6 +56,7 @@ function App() {
         <div className="content">
           <Switch>
             {wishlistItems && cartItems && <Route exact path='/'><Home getters={getters} setters={setters} /></Route>}
+            <Route path="/pdp/:id"> <ProductDetail /> </Route>
           </Switch>
         </div>
         <div className="dummy-row"></div>

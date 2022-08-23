@@ -124,6 +124,7 @@
     /* top: calc(131px + 1rem); */
     top: 130px;
     transition: right 0.5s ease-in-out;
+    overflow-y: scroll;
 }
 
 .header-icon-menu .item {

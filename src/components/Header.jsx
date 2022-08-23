@@ -25,7 +25,7 @@ const Header = ({ getters, setters }) => {
                     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <i className="fa-solid fa-bars"></i>
                     </button>
-                    <Link to="/" className="navbar-brand p-1"><img src="img/wdaw-logo.png" alt="" /></Link>
+                    <Link to="/" className="navbar-brand p-1"><img src="/img/wdaw-logo.png" alt="" /></Link>
                     <div className="collapse navbar-collapse " id="navbarSupportedContent">
                         <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                             <li className="nav-item services">
