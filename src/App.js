@@ -5,6 +5,7 @@ import Home from "./pages/Home";
 import Modals from "./components/Modals";
 import { useEffect, useState } from "react";
 import ProductDetail from "./pages/ProductDetail";
+import CategoryLanding from "./pages/CategoryLanding";
 
 // npx json-server --watch data/db.json --port 8000
 
@@ -57,6 +58,7 @@ function App() {
           <Switch>
             {wishlistItems && cartItems && <Route exact path='/'><Home getters={getters} setters={setters} /></Route>}
             <Route path="/pdp/:id"> <ProductDetail /> </Route>
+            <Route path="/clp"> <CategoryLanding getters={getters} setters={setters} /> </Route>
           </Switch>
         </div>
         <div className="dummy-row"></div>

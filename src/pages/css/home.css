@@ -70,8 +70,15 @@
     color: #fff;
     background-color: transparent;
     font-size: 0.8rem;
+    font-weight: 600;
     padding: 0.5rem 0.75rem;
     border-radius: 20px;
+    transition: all 0.3s ease-in-out;
+}
+
+.carousel-banner .carousel-item-content button:hover {
+    background-color: #fff;
+    color: #0d6efd;
 }
 
 /* /Carousel Banner */

@@ -3,6 +3,7 @@ import useFetch from '../useFetch';
 import './css/home.css';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import { Link } from 'react-router-dom';
 
 const Home = ({ getters, setters }) => {
 
@@ -30,7 +31,7 @@ const Home = ({ getters, setters }) => {
                                     <div className="carousel-item-content">
                                         <h1>Be the best at your work</h1>
                                         <p>Improve your work performance and client experience with powerful and fast solutions that we will provide and specialized for you.</p>
-                                        <button>WIEV ALL OUR PRODUCTS</button>
+                                        <Link to="/clp"><button>WIEV ALL OUR PRODUCTS</button></Link>
 
                                     </div>
                                 </div>
@@ -39,7 +40,7 @@ const Home = ({ getters, setters }) => {
                                     <div className="carousel-item-content">
                                         <h1>Be the best at your work</h1>
                                         <p>Improve your work performance and client experience with powerful and fast solutions that we will provide and specialized for you.</p>
-                                        <button>WIEV ALL OUR PRODUCTS</button>
+                                        <Link to="/clp"><button>WIEV ALL OUR PRODUCTS</button></Link>
                                     </div>
                                 </div>
                                 <div className="carousel-item">
@@ -47,7 +48,7 @@ const Home = ({ getters, setters }) => {
                                     <div className="carousel-item-content">
                                         <h1>Be the best at your work</h1>
                                         <p>Improve your work performance and client experience with powerful and fast solutions that we will provide and specialized for you.</p>
-                                        <button>WIEV ALL OUR PRODUCTS</button>
+                                        <Link to="/clp"><button>WIEV ALL OUR PRODUCTS</button></Link>
                                     </div>
                                 </div>
                             </div>
@@ -136,27 +137,3 @@ const Home = ({ getters, setters }) => {
 export default Home;
 
 
-/* <div className="col-12 col-md-6  col-xl-3 ">
-
-                        </div>
-                        <div className="d-none d-md-flex col-md-6  col-xl-3 ">
-
-                        </div>
-                        <div className="d-none d-md-flex col-md-6  col-xl-3 ">
-
-                        </div>
-                        <div className="d-none d-md-flex col-md-6  col-xl-3 ">
-
-                        </div>
-                        <div className="d-none d-xl-flex col-xl-3 ">
-
-                        </div>
-                        <div className="d-none d-xl-flex col-xl-3 ">
-
-                        </div>
-                        <div className="d-none d-xl-flex col-xl-3 ">
-
-                        </div>
-                        <div className="d-none d-xl-flex col-xl-3 ">
-
-                        </div> */

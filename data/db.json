@@ -19,13 +19,13 @@
       "id": 19
     },
     {
-      "image": "/img/product-tiles/17.jpg",
-      "name": "Product 17",
+      "image": "/img/product-tiles/8.jpg",
+      "name": "Product 8",
       "info": "Lorem ipsum, dolor sit amet consectetur adipisicing elit.",
-      "price": 49,
-      "isPopular": true,
-      "isFeatured": false,
-      "id": 17
+      "price": 89,
+      "isPopular": false,
+      "isFeatured": true,
+      "id": 8
     }
   ],
   "cart": [
