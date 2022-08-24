@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import './css/product-tile.css';
 
 const ProductTile = ({ product, getters, setters }) => {
@@ -6,11 +7,11 @@ const ProductTile = ({ product, getters, setters }) => {
     return (
         <div className="product-tile" >
             <img src={product.image} alt="Product" />
-            <div className="info">
+            <Link to={`/pdp/${product.id}`}><div className="info">
                 <h5>{product.name}</h5>
                 <p data-aos="fade-in" data-aos-offset="0">{product.info}</p>
                 <div className='price' >{product.price}</div>
-            </div>
+            </div></Link>
             <div id={sidebarID} className="sidebar" >
                 <button className="add-to-cart sidebar-item"
                     onMouseOver={() => {

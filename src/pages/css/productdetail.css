@@ -12,12 +12,42 @@
     padding: 0;
 }
 
+.pdp .big-image {
+    position: relative;
+}
+
 .pdp .big-image img {
     /* width: 100%;
     height: 100%; */
     max-width: 45vw;
     max-height: 70vh;
     border-radius: 10px;
+    position: relative;
+    z-index: 1;
+}
+
+.pdp #add-to-wishlist {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 2;
+    background-color: #0d6efd;
+    border: 2px solid #0d6efd;
+    border-radius: 50%;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    padding: 0.75rem;
+    width: fit-content;
+    margin-top: 2.75rem;
+    transition: all 0.4s ease-in-out;
+}
+
+.pdp #add-to-wishlist:hover {
+    color: #0d6efd;
+    background-color: #fff;
 }
 
 .pdp .thumbnails {
@@ -128,4 +158,42 @@
     top: 0;
     left: 8.5rem;
     color: rgb(194, 39, 39);
+}
+
+.pdp .add-to-cart button {
+    color: #fff;
+    background-color: #0d6efd;
+    border: 2px solid #0d6efd;
+    border-radius: 50%;
+    transition: all 0.4s ease-in-out;
+    width: 40px;
+    height: 40px;
+}
+
+.pdp .add-to-cart button:hover {
+    color: #0d6efd;
+    background-color: #fff;
+}
+
+.pdp .add-to-cart span {
+    font-size: 1.5rem;
+    font-weight: 600;
+    position: relative;
+    bottom: -3px;
+}
+
+#add-to-cart {
+    width: fit-content;
+    border-radius: 10px;
+    margin-left: 2rem;
+    padding: 0 1rem;
+}
+
+.pdp .share a {
+    font-size: 1.5rem;
+    margin: 0 1rem;
+}
+
+.pdp .share a:hover i {
+    color: #0d6efd;
 }
