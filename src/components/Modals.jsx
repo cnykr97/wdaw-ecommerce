@@ -9,7 +9,7 @@ const Modals = () => {
                         <div className="modal-header d-flex flex-column">
                             <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                             <div className="modal-logo">
-                                <img src="img/wdaw-logo.png" alt="wdaw-logo" className='img-fluid' />
+                                <img src="/img/wdaw-logo.png" alt="wdaw-logo" className='img-fluid' />
                             </div>
                             <h2 className="modal-title mx-auto" id="exampleModalLabel" style={{ color: '#0d6efd' }}>Sign In</h2>
                         </div>

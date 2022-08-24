@@ -14,40 +14,21 @@
 
 .pdp .big-image {
     position: relative;
+    max-width: fit-content;
+    margin: 0 auto;
 }
 
 .pdp .big-image img {
-    /* width: 100%;
-    height: 100%; */
-    max-width: 45vw;
-    max-height: 70vh;
+    width: 100%;
+    height: 100%;
+    /* max-width: 45vw;
+    max-height: 70vh; */
     border-radius: 10px;
-    position: relative;
-    z-index: 1;
+    display: none;
 }
 
-.pdp #add-to-wishlist {
-    position: absolute;
-    top: 0;
-    right: 0;
-    z-index: 2;
-    background-color: #0d6efd;
-    border: 2px solid #0d6efd;
-    border-radius: 50%;
-    color: #fff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 1.5rem;
-    padding: 0.75rem;
-    width: fit-content;
-    margin-top: 2.75rem;
-    transition: all 0.4s ease-in-out;
-}
-
-.pdp #add-to-wishlist:hover {
-    color: #0d6efd;
-    background-color: #fff;
+.pdp .big-image #big-1 {
+    display: block;
 }
 
 .pdp .thumbnails {
@@ -60,6 +41,13 @@
     max-height: 15vh;
     margin: 1rem;
     border-radius: 10px;
+    opacity: 0.6;
+    cursor: pointer;
+    transition: opacity 0.4s ease-in-out;
+}
+
+.pdp .thumbnails img:hover {
+    opacity: 1;
 }
 
 .pdp .info {
@@ -76,6 +64,30 @@
     position: absolute;
     top: 0;
     right: 0;
+}
+
+.pdp #add-to-wishlist {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 2;
+    background-color: #0d6efd;
+    border: 2px solid #0d6efd;
+    border-radius: 15px;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    padding: 0.75rem;
+    width: fit-content;
+    margin-top: 2.75rem;
+    transition: all 0.4s ease-in-out;
+}
+
+.pdp #add-to-wishlist:hover {
+    color: #0d6efd;
+    background-color: #fff;
 }
 
 .pdp .info .rating {
@@ -139,10 +151,14 @@
     margin: 0 1.2rem;
     cursor: pointer;
     font-weight: 600;
+    border: 1px solid #d3d3d3;
+    width: 40px;
+    text-align: center;
 }
 
 .pdp .info ul li:hover {
     color: #0d6efd;
+    border: 1px solid #0d6efd;
 }
 
 .pdp .info .price {
