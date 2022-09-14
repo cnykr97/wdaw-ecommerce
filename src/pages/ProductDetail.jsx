@@ -1,11 +1,12 @@
-import { Box, Rating, Tab } from '@mui/material';
+import { Box, Rating, Tab, Tabs } from '@mui/material';
 import { useState } from 'react';
 import { useParams } from 'react-router-dom';
 import './css/productdetail.css';
 
-const ProductDetail = () => {
+const ProductDetail = (val) => {
+
     const { id } = useParams();
-    const [quantity, setQuantity] = useState(0)
+    const [quantity, setQuantity] = useState(0);
 
     const handleIncreaseQuantity = () => {
         setQuantity(quantity + 1)
@@ -97,7 +98,6 @@ const ProductDetail = () => {
                     </div>
                 </div>
             </div>
-
         </div>
     );
 }

@@ -1,5 +1,6 @@
 import './css/header.css';
 import { Link } from 'react-router-dom';
+import { IconButton, Tooltip } from '@mui/material';
 
 const Header = ({ getters, setters }) => {
 
@@ -178,8 +179,8 @@ const Header = ({ getters, setters }) => {
             </nav>
             <div id='wishlist-menu' className="header-icon-menu" style={{ right: '-26vw' }}>
                 <div className="container-fluid">
-                    <h5 className='header-icon-menu-header'>WISHLIST ITEMS</h5>
-                    {(getters.wishlistItems.length < 1) && <h1>You have not any items yet.</h1>}
+                    <h5 className='header-icon-menu-header'>WISHLIST</h5>
+                    {(getters.wishlistItems.length < 1) && <h3>You have not any items yet.</h3>}
                     {(getters.wishlistItems.length > 0) && getters.wishlistItems.map(item => (
                         <div className="row item" key={item.id}>
                             <div className="col-4">
@@ -192,7 +193,12 @@ const Header = ({ getters, setters }) => {
                             </div>
                             <div className="col-2">
                                 {/* <button><i className="fa-regular fa-shopping-cart fa-lg"></i></button> */}
-                                <button><i className="fa-solid fa-trash-can fa-lg"></i></button>
+
+                                <Tooltip title="Remove">
+                                    <IconButton>
+                                        <i className="fa-solid fa-trash-can "></i>
+                                    </IconButton>
+                                </Tooltip>
                             </div>
                         </div>
                     ))}
@@ -213,7 +219,11 @@ const Header = ({ getters, setters }) => {
                                 <h4>${item.price}</h4>
                             </div>
                             <div className="col-2">
-                                <button alt='remove item'><i className="fa-solid fa-trash-can fa-lg"></i></button>
+                                <Tooltip title="Remove">
+                                    <IconButton>
+                                        <i className="fa-solid fa-trash-can "></i>
+                                    </IconButton>
+                                </Tooltip>
                             </div>
                         </div>
                     ))}

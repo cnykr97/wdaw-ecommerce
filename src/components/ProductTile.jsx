@@ -42,6 +42,7 @@ const ProductTile = ({ product, getters, setters }) => {
                     onClick={(e) => {
                         e.preventDefault();
                         setters.setWishlistNumber(getters.wishlistNumber + 1)
+                        console.log(getters.wishlistItems.length)
                         fetch("http://localhost:8000/wishlist", {
                             method: 'POST',
                             headers: { "Content-Type": "application/json" },

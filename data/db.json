@@ -1,6 +1,15 @@
 {
   "wishlist": [
     {
+      "image": "/img/product-tiles/3.jpg",
+      "name": "Product 3",
+      "info": "Lorem ipsum, dolor sit amet consectetur adipisicing elit.",
+      "price": 59,
+      "isPopular": true,
+      "isFeatured": false,
+      "id": 3
+    },
+    {
       "image": "/img/product-tiles/9.jpg",
       "name": "Product 9",
       "info": "Lorem ipsum, dolor sit amet consectetur adipisicing elit.",
@@ -10,22 +19,31 @@
       "id": 9
     },
     {
-      "image": "/img/product-tiles/19.jpg",
-      "name": "Product 19",
-      "info": "Lorem ipsum, dolor sit amet consectetur adipisicing elit.",
-      "price": 89.99,
-      "isPopular": true,
-      "isFeatured": false,
-      "id": 19
-    },
-    {
-      "image": "/img/product-tiles/8.jpg",
-      "name": "Product 8",
+      "image": "/img/product-tiles/1.jpg",
+      "name": "Product 1",
       "info": "Lorem ipsum, dolor sit amet consectetur adipisicing elit.",
       "price": 89,
+      "isPopular": true,
+      "isFeatured": false,
+      "id": 1
+    },
+    {
+      "image": "/img/product-tiles/7.jpg",
+      "name": "Product 7",
+      "info": "Lorem ipsum, dolor sit amet consectetur adipisicing elit.",
+      "price": 24.99,
+      "isPopular": true,
+      "isFeatured": false,
+      "id": 7
+    },
+    {
+      "image": "/img/product-tiles/10.jpg",
+      "name": "Product 10",
+      "info": "Lorem ipsum, dolor sit amet consectetur adipisicing elit.",
+      "price": 79,
       "isPopular": false,
       "isFeatured": true,
-      "id": 8
+      "id": 10
     }
   ],
   "cart": [
@@ -46,6 +64,15 @@
       "isPopular": true,
       "isFeatured": false,
       "id": 5
+    },
+    {
+      "image": "/img/product-tiles/7.jpg",
+      "name": "Product 7",
+      "info": "Lorem ipsum, dolor sit amet consectetur adipisicing elit.",
+      "price": 24.99,
+      "isPopular": true,
+      "isFeatured": false,
+      "id": 7
     }
   ],
   "products": [

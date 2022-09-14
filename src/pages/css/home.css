@@ -145,8 +145,14 @@
 .benefits {
     margin: 0 -2rem;
     background-color: #fff;
-    padding: 4rem 0;
+    padding: 2rem 0;
 }
+
+.benefits .container-fluid,
+.benefits .container-fluid .col-7 {
+    padding: 0;
+}
+
 
 .benefits .seperate {
     width: 100%;

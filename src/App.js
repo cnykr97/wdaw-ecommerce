@@ -53,10 +53,10 @@ function App() {
     <Router>
       <div className="App">
         <Modals />
-        {wishlistItems && cartItems && <Header getters={getters} setters={setters} />}
+        {getters && setters && <Header getters={getters} setters={setters} />}
         <div className="content">
           <Switch>
-            {wishlistItems && cartItems && <Route exact path='/'><Home getters={getters} setters={setters} /></Route>}
+            {getters && setters && <Route exact path='/'><Home getters={getters} setters={setters} /></Route>}
             <Route path="/pdp/:id"> <ProductDetail /> </Route>
             <Route path="/clp"> <CategoryLanding getters={getters} setters={setters} /> </Route>
           </Switch>
